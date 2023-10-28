@@ -25,11 +25,11 @@ public class CustomerManager {
        Query query = em.createNamedQuery("Customer.findAll");
        return query.getResultList();
     }
-
+@Transactional
     public Customer update(Customer customer) {
        return em.merge(customer);
     }
-
+@Transactional
     public void persist(Customer customer) {
        em.persist(customer);
     }

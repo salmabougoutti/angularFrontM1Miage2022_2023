@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="jakarta.faces.html"
-      xmlns:f="jakarta.faces.core">
+      xmlns:f="jakarta.faces.core"
+      >
     <h:head>
         <title>Liste des clients</title>
     </h:head>
@@ -31,7 +32,7 @@
                 <f:facet name="header">
                     <h:outputText value="Discount"/>
                 </f:facet>
-                <h:outputText value="#{item.getdiscount}"/>
+                <h:outputText value="#{item.discountCode.code}:#{item.discountCode.rate}"/>
             </h:column>
         </h:dataTable>
 
